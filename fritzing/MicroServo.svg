@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0"
+   y="0"
+   width="1.13976032in"
+   height="0.917024in"
+   viewBox="0 0 113.976032 91.7024"
+   id="svg4970"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="MicroServo.svg">
+  <metadata
+     id="metadata5008">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5006" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview5004"
+     showgrid="false"
+     inkscape:zoom="8.0878628"
+     inkscape:cx="73.806694"
+     inkscape:cy="62.351884"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4970" />
+  <g
+     id="g6309"
+     transform="translate(-0.29946618,8.6886845)">
+    <rect
+       style="fill:none"
+       height="1"
+       width="1"
+       y="64.330666"
+       x="101.26348"
+       id="connector0pin" />
+    <rect
+       style="fill:none"
+       height="1"
+       width="1"
+       y="61.50766"
+       x="101.37246"
+       id="connector1pin" />
+    <rect
+       style="fill:none"
+       height="1"
+       width="1"
+       y="58.724663"
+       x="101.26348"
+       id="connector2pin" />
+    <line
+       y2="75.750656"
+       x2="113.78652"
+       y1="74.750664"
+       x1="112.16346"
+       id="connector0leg"
+       style="fill:none;stroke:#000000;stroke-width:3.00000024;stroke-linecap:round" />
+    <line
+       y2="65.750664"
+       x2="113.78652"
+       y1="65.407661"
+       x1="112.47746"
+       id="connector1leg"
+       style="fill:none;stroke:#ff0000;stroke-width:3.00000024;stroke-linecap:round" />
+    <line
+       y2="55.750656"
+       x2="113.78652"
+       y1="56.024658"
+       x1="112.31647"
+       id="connector2leg"
+       style="fill:none;stroke:#ffff00;stroke-width:3.00000024;stroke-linecap:round" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#000000;stroke-width:3.00000024"
+       inkscape:connector-curvature="0"
+       d="m 79.420059,51.416932 c 0,0 26.029601,15.990408 32.743431,23.333724"
+       id="path7" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#ff0000;stroke-width:3.00000024"
+       inkscape:connector-curvature="0"
+       d="m 78.155259,50.654632 c 5.604,0 28.922231,12.482026 34.322231,14.753026"
+       id="path9" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#ffff00;stroke-width:3.00000024"
+       inkscape:connector-curvature="0"
+       d="m 78.870539,50.069714 c 7.475,0 24.565771,4.792464 33.171181,6.118524"
+       id="path11" />
+    <polygon
+       style="fill:#333333"
+       points="0.556,9.302 17.372,9.302 17.372,-9.384 97.717,-9.384 97.717,9.302 114.532,9.302 114.532,11.169 97.717,11.169 97.717,46.669 17.372,46.669 17.372,11.169 0.556,11.169 "
+       id="polygon13"
+       transform="matrix(0.5,0,0,0.5,28.582732,36.753588)" />
+    <polygon
+       points="11.766,11.169 17.372,11.169 17.372,46.669 11.766,41.065 "
+       id="polygon15"
+       transform="matrix(0.5,0,0,0.5,28.582732,36.753588)" />
+    <polygon
+       style="fill:#999999"
+       points="0.556,9.302 0.556,-0.042 11.766,-0.042 11.766,3.695 17.372,9.302 "
+       id="polygon17"
+       transform="matrix(0.5,0,0,0.5,28.582732,36.753588)" />
+    <polygon
+       style="fill:#999999"
+       points="97.717,-31.805 103.321,-26.2 103.321,-14.989 97.717,-9.384 17.372,-9.384 11.766,-14.989 11.766,-26.2 17.372,-31.805 "
+       id="polygon19"
+       transform="matrix(0.5,0,0,0.5,28.582732,36.753588)" />
+    <polygon
+       style="fill:#666666"
+       points="103.321,11.169 97.717,11.169 97.717,46.669 103.321,41.065 "
+       id="polygon21"
+       transform="matrix(0.5,0,0,0.5,28.582732,36.753588)" />
+    <polygon
+       style="fill:#999999"
+       points="114.533,9.302 114.533,-0.042 103.321,-0.042 103.321,3.695 97.717,9.302 "
+       id="polygon23"
+       transform="matrix(0.5,0,0,0.5,28.582732,36.753588)" />
+    <polygon
+       points="11.766,-14.989 17.372,-9.384 17.372,9.302 11.766,3.695 "
+       id="polygon25"
+       transform="matrix(0.5,0,0,0.5,28.582732,36.753588)" />
+    <polygon
+       style="fill:#666666"
+       points="103.321,-14.989 97.717,-9.384 97.717,9.302 103.321,3.695 "
+       id="polygon27"
+       transform="matrix(0.5,0,0,0.5,28.582732,36.753588)" />
+    <path
+       style="fill:#cccccc"
+       inkscape:connector-curvature="0"
+       d="m 50.818232,27.950588 c -3.281,1.805 -6.893001,0.7705 -8.271501,-0.081 -1.378999,-0.8515 -9.529499,-7.785 -10.623499,-8.4745 -1.095,-0.6895 -0.9735,-1.66 -0.9735,-3.0655 0,-1.7885 0.892,1.338 2.758,2.1895 1.8645,0.8515 18.8415,2.9465 18.8415,6.055 -0.001,0.946 0.3775,2.2165 -1.731,3.3765 z"
+       id="path29" />
+    <path
+       style="fill:#ffffff"
+       inkscape:connector-curvature="0"
+       d="m 50.818232,26.993588 c -3.122,2.068 -6.893001,0.7705 -8.271501,-0.0815 -1.378999,-0.8515 -9.529499,-7.785 -10.623499,-8.4745 -1.095,-0.689 -1.541,-2.7165 -0.0405,-3.6895 1.5,-0.973 3.568,-0.406 5.433,0.446 1.865,0.8515 9.6915,4.1355 12.367,5.7175 2.6765,1.580999 4.2585,4.014 1.1355,6.082 z m -16.4085,-9.421 c 1.314,0 2.3795,-0.5325 2.3795,-1.1895 0,-0.657 -1.0655,-1.189 -2.3795,-1.189 -1.314,0 -2.379,0.532 -2.379,1.189 0,0.657 1.065,1.1895 2.379,1.1895 z"
+       id="path31" />
+    <g
+       id="g33"
+       transform="matrix(0.5,0,0,0.5,28.582732,36.753588)">
+      <path
+         style="fill:#cccccc"
+         inkscape:connector-curvature="0"
+         d="m 16.35,-40.229 c -0.472,-1.065 -2.369,-1.862 -4.643,-1.862 -2.272,0 -4.231,0.796 -4.703,1.861 l 0.004,10e-4 c -0.072,-0.165 -0.112,-0.335 -0.112,-0.511 0,-1.314 2.13,-2.378 4.758,-2.378 2.628,0 4.759,1.064 4.759,2.378 0,0.176 0,0.356 -0.072,0.521 l 0.009,-0.01 z"
+         id="path35" />
+    </g>
+    <g
+       id="g37"
+       transform="matrix(0.5,0,0,0.5,28.582732,36.753588)">
+      <ellipse
+         style="fill:#999999"
+         ry="4.4650002"
+         rx="8.0019999"
+         cy="-25.386"
+         cx="36.091999"
+         id="ellipse39" />
+      <g
+         id="g41">
+        <path
+           style="fill:#666666"
+           inkscape:connector-curvature="0"
+           d="m 28.234,-25.429 c 0.794,1.919 3.985,3.356 7.807,3.356 3.822,0 7.116,-1.436 7.912,-3.356 l -0.008,0 c 0.121,0.296 0.188,0.604 0.188,0.92 0,2.368 -3.582,4.288 -8.002,4.288 -4.42,0 -8.002,-1.92 -8.002,-4.288 0,-0.316 -0.001,-0.642 0.12,-0.938 l -0.015,0.018 z"
+           id="path43" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:44.44444275px;line-height:80.00000119%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#d1d1d1;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="57.44957"
+       y="26.000992"
+       id="text6342"
+       sodipodi:linespacing="80.000001%"><tspan
+         sodipodi:role="line"
+         id="tspan6344"
+         x="57.44957"
+         y="26.000992"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.55555582px;line-height:80.00000119%;font-family:Consolas;-inkscape-font-specification:'Consolas, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#d1d1d1;fill-opacity:1;">MICRO</tspan><tspan
+         sodipodi:role="line"
+         x="57.44957"
+         y="30.445436"
+         id="tspan6346"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.55555582px;line-height:80.00000119%;font-family:Consolas;-inkscape-font-specification:'Consolas, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#d1d1d1;fill-opacity:1;">SERVO</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+3-5 wires
+
+flex sensor
+
+YUN
+
+10k res

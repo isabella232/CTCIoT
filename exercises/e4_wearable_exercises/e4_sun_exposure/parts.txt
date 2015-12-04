@@ -1,0 +1,7 @@
+3-5 wires
+
+LDR
+
+YUN
+
+10k res

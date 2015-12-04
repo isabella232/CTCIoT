@@ -1,0 +1,7 @@
+3-5 wires
+
+pressure sensor
+
+YUN
+
+10k res
