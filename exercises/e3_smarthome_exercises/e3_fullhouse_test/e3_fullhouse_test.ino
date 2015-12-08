@@ -29,7 +29,8 @@ int temperatureCount = 0;
 // saveing the old temperature value
 int oldtemperatureCount = 0;
 
-int tempControl = 0; // state switcher for testing each device
+int tempControl = 1; // state switcher for testing each device
+int deviceSwitcher = 0; // counter for switching between the motors/solenoid and servos
 
 void setup() {
 
@@ -56,119 +57,150 @@ void setup() {
 }
 
 void loop() {
-// changes the states of each motor/servo/solenoid
-  if (tempControl == 0) {
-    tempControl=1;
-  }  else if (tempControl == 1) {
-    tempControl=0;
-  }
 
 
   //--------------------------------------------
   //temperature sensor and updater
   //--------------------------------------------
+  if (deviceSwitcher == 0) {
+    // Take in the value from the sensor
+    int sensorRaw = analogRead(0);// from analog sensor 0
+    int sensor = (5.0 * sensorRaw * 100.0) / 1024;  // calculate the celsus from the raw value of the sensor
+    // set the sensor value to the temperatureCount
+    temperatureCount = sensor;
 
-  // Take in the value from the sensor
-  int sensorRaw = analogRead(0);// from analog sensor 0
-  int sensor = (5.0 * sensorRaw * 100.0) / 1024;  // calculate the celsus from the raw value of the sensor
-  // set the sensor value to the temperatureCount
-  temperatureCount = sensor;
-
-  Serial.print("temp: ");
-  Serial.println(temperatureCount)
-
-
-  //--------------------------------------------
-  //clothesline servo
-  //--------------------------------------------
-
-
-  //checks if the temp control is off/0 or anything else is on
-  if (tempControl == 0) {
-    // servo off state
-    clotheslineservo.write(90);//90 is no rotation
-  } else {
-    // servo on state
-    clotheslineservo.write(180);
-
-  }
-
-  //--------------------------------------------
-  //vent the air solenoid
-  //--------------------------------------------
-
-
-
-  //checks if the temp control is on/1 or anything else is off
-  if (tempControl == 1) {
-    // solenoid on
-    digitalWrite(ventsolenoidPin, LOW);
-  } else {
-    // solenoid  off
-    digitalWrite(ventsolenoidPin, HIGH);
-  }
-
-
-  //--------------------------------------------
-  //shades servo
-  //--------------------------------------------
-
-
-
-  //checks if the temp control is off/0 or anything else is on
-  if (tempControl == 0) {
-
-    // servo off state
-    shadesservo.write(30);
-
-  } else {
-    // servo on state
-    shadesservo.write(180);
-  }
-
-  //--------------------------------------------
-  //water plant solenoid
-  //--------------------------------------------
-
-
-  //checks if the temp control is on/1 or anything else is off
-  if (tempControl == 1) {
-    // solenoid on
-    digitalWrite(watersolenoid, LOW);
-  } else {
-    // solenoid  off
-    digitalWrite(watersolenoid, HIGH);
-  }
-
-
-  //--------------------------------------------
-  //fan dc motor
-  //--------------------------------------------
-
-
-  //checks if the temp control is off/0 or anything else is on
-  if (tempControl == 0) {
-    // motor/fan on
-    Serial.println("fan on");
-    digitalWrite(motorPin, LOW);
-    kickStart = 1;
-  } else {
-    // motor/fan  off
-    Serial.println("fan off");
-    while (kickStart == 1) {
-      analogWrite(motorPin, 255);
-      delay(250);
-      kickStart = 0;
+    //if the temp is the same, do nothing
+    if (oldtemperatureCount == temperatureCount) {
+      //temp is the same, no need to update it
+    } else {
+      Serial.print("Temp: ");
+      Serial.println(temperatureCount);
+      Serial.println("");
     }
-    analogWrite(motorPin, 50);
-    // prints and the Temp control states in the serial montitor
+    deviceSwitcher++;
+
+  } else if (deviceSwitcher == 1) {
+
+    //--------------------------------------------
+    //clothesline servo
+    //--------------------------------------------
+
+    //checks if the temp control is off/0 or anything else is on
+    if (tempControl == 0) {
+      // servo off state
+      clotheslineservo.write(90);//90 is no rotation
+    } else {
+      // servo on state
+      clotheslineservo.write(180);
 
 
+    }
+    Serial.println("Clothesline control");
+    Serial.print("Temp control state: ");
+    Serial.println(tempControl);
+    Serial.println("");
 
-    delay(5000); //wait 5 sec
-    
+    deviceSwitcher++;
 
+  } else if (deviceSwitcher == 2) {
+    //--------------------------------------------
+    //vent the air solenoid
+    //--------------------------------------------
+
+    //checks if the temp control is on/1 or anything else is off
+    if (tempControl == 1) {
+      // solenoid on
+      digitalWrite(ventsolenoidPin, LOW);
+    } else {
+      // solenoid  off
+      digitalWrite(ventsolenoidPin, HIGH);
+    }
+
+    Serial.println("Vent control");
+    Serial.print("Temp control 2 state: ");
+    Serial.println(tempControl);
+    Serial.println("");
+
+    deviceSwitcher++;
   }
+  else if (deviceSwitcher == 3) {
+    //--------------------------------------------
+    //shades servo
+    //--------------------------------------------
+
+
+    //checks if the temp control is off/0 or anything else is on
+    if (tempControl == 0) {
+
+      // servo off state
+      shadesservo.write(30);
+
+    } else {
+      // servo on state
+      shadesservo.write(180);
+    }
+
+
+    deviceSwitcher++;
+  }
+  else if (deviceSwitcher == 4) {
+    //--------------------------------------------
+    //water plant solenoid
+    //--------------------------------------------
+
+
+    //checks if the temp control is on/1 or anything else is off
+    if (tempControl == 0) {
+      // solenoid off
+      digitalWrite(watersolenoid, LOW);
+    } else {
+      // solenoid  on
+      digitalWrite(watersolenoid, HIGH);
+    }
+
+
+    Serial.println("Water control");
+    Serial.print("Temp control 4 state: ");
+    Serial.println(tempControl);
+    Serial.println("");
+
+    deviceSwitcher++;
+  }
+  else if (deviceSwitcher == 5) {
+    //--------------------------------------------
+    //fan dc motor
+    //--------------------------------------------
+
+    //checks if the temp control is off/0 or anything else is on
+    if (tempControl == 0) {
+      // motor/fan off
+
+      digitalWrite(motorPin, LOW);
+      kickStart = 1;
+    } else {
+      // motor/fan  on;
+
+      analogWrite(motorPin, 255);
+
+      // prints and the Temp control states in the serial montitor
+    }
+
+    Serial.println("Fan control");
+    Serial.print("Temp control 5 state: ");
+    Serial.println(tempControl);
+    Serial.println("");
+    deviceSwitcher = 0;
+  }
+
+  delay(2000); //wait 2 sec
+
+  //reset all motors/servos
+  digitalWrite(motorPin, LOW);
+  digitalWrite(watersolenoid, LOW);
+  shadesservo.write(30);
+  digitalWrite(ventsolenoidPin, LOW);
+  clotheslineservo.write(90);
+
+  oldtemperatureCount = temperatureCount;// update the old temperature to the current temperature count
 
 }
-

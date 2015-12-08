@@ -5,7 +5,6 @@ int motorPin = 6;
 int buttonPin = 2;    // the number of the button pin
 
 int buttonState = 0;   // variable for reading the button status
-int kickStart = 0; // the motor is set to not run at full power, it needs a kick start to get going
 
 
 void setup() {
@@ -29,18 +28,14 @@ void loop() {
     // motor/fan on
     Serial.println("fan on");
 
-    while (kickStart == 1) {
-      analogWrite(motorPin, 255);
-      delay(250);
-      kickStart = 0;
-    }
-    analogWrite(motorPin, 50);
+
+    analogWrite(motorPin, 255);
 
   } else {
     // motor/fan  off
     Serial.println("fan off");
     digitalWrite(motorPin, LOW);
-    kickStart = 1;
+
   }
 
 

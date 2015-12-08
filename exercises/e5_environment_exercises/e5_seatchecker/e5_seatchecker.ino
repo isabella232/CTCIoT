@@ -53,7 +53,7 @@ void loop() {
 
   // Take in the value from the sensor
   int sensorRaw = analogRead(0);// from analog sensor 0
-  int sensor = (5.0 * analogRead(sensorRaw) * 100.0) / 1024;  // calculate the celsus from the raw value of the sensor
+  int sensor = (5.0 * sensorRaw * 100.0) / 1024;  // calculate the celsus from the raw value of the sensor
   // set the sensor value to the temperatureCount
   if (sensor > threshold) {
 

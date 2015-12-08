@@ -29,11 +29,11 @@ void loop() {
   if (buttonState == HIGH) { //button is pushed
     Serial.println("vent closed");
     // solenoid on
-    digitalWrite(solenoidPin, HIGH);
+    digitalWrite(solenoidPin, LOW);
   } else {
     // solenoid  off
     Serial.println("vent open");
-    digitalWrite(solenoidPin, LOW);
+    digitalWrite(solenoidPin, HIGH);
   }
 
 
