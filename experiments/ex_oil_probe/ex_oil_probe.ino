@@ -152,15 +152,16 @@ void loop() {
     //change the massage depending on the sensors
     // check all the sensors for oil
     if (oilDetected0 == 1 || oilDetected1 == 1 || oilDetected2 == 1 || oilDetected3 == 1 ) {
-      oilStatus = "Oil detected" ;
+      oilStatus = "Oil detected: Value at:=" ;
     }
     else {
-      oilStatus = "No oil detected ";
+      oilStatus = "No oil detected, Value at:=";
     }
 
 
     //add up all of the sensor value, the higher value the better
     int oilSensor = sensor0 + sensor1 + sensor2 + sensor3;
+    
     // prints the current oilStatus in the serial montitor
     Serial.print(oilStatus);
     Serial.print(" Total value form all of the sensors: ");
@@ -172,7 +173,6 @@ void loop() {
     url += group;
     url += "/index.php?";
 
-    oilStatus += "  Oil sensors=";
     oilStatus = urlEncode(oilStatus); // change the string to fit the url format
     url += oilStatus; // add the status to the url
     url += oilSensor; // add the sensor to the url

@@ -13,7 +13,11 @@ int oilControlltreshhold = 5; // number of times that the sensor will skip a hig
 unsigned long int callurlTimer = 0; //  url timer
 unsigned long int callurlDelay = 5000; // url delay. 1000=1 sec
 
-
+// variables for the detection of oil
+int oilDetected0 = 0;
+int oilDetected1 = 0;
+int oilDetected2 = 0;
+int oilDetected3 = 0;
 
 void setup() {
 
@@ -32,11 +36,7 @@ void loop() {
   int sensor2 = analogRead(2);// from analog sensor 2
   int sensor3  = analogRead(3);// from analog sensor 3
 
-  // variables for the detection of oil
-  int oilDetected0 = 0;
-  int oilDetected1 = 0;
-  int oilDetected2 = 0;
-  int oilDetected3 = 0;
+
 
 
   //----------------------------------
@@ -61,6 +61,7 @@ void loop() {
   if (sensor0 == oilTreshhold &&  oilControl0 >= oilControlltreshhold) {
     oilDetected0 = 1; //oil is dectected
     oilControl0 = 0; //reset the oil control
+
   }
 
   //----------------------------------
@@ -140,6 +141,7 @@ void loop() {
     // check all the sensors for oil
     if (oilDetected0 == 1 || oilDetected1 == 1 || oilDetected2 == 1 || oilDetected3 == 1 ) {
       oilStatus = "Oil detected" ;
+
     }
     else {
       oilStatus = "No oil detected ";

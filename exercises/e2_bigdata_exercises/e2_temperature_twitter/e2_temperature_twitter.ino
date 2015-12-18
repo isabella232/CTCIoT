@@ -28,6 +28,15 @@ int buttonPushed = 0; // variable for checking if the button been pushed or not
 unsigned long int callurlTimer = 0; //  url timer
 unsigned long int callurlDelay = 10000; // url delay. 1000=1 sec
 
+//Libraries for the NeoPixel
+#include <Adafruit_NeoPixel.h>
+// Which pin on the Arduino is connected to the NeoPixel
+#define PIN            6  // pin for the NeoPixel
+// SETUP for NeoPixel
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(1, PIN, NEO_GRB + NEO_KHZ800); // Setup for the NeoPixel
+
+
+
 void setup() {
   // configure the 13 pin as a OUTPUT
   pinMode(13, OUTPUT);
@@ -37,6 +46,8 @@ void setup() {
   digitalWrite(13, LOW);
   Bridge.begin(); //starts the Bridge
   digitalWrite(13, HIGH);
+
+  pixels.begin(); // This initializes the NeoPixel library.
 
   // configure the serial
   Serial.begin(9600);
@@ -98,6 +109,13 @@ void loop() {
     if (temperatureNegative) {
       temperature = temperature - (temperature * 2);
     }
+    // red light
+    //loop for updating the colours of the NeoPixel
+    for (int i = 0; i < 1; i++) {
+      // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
+      pixels.setPixelColor(i, pixels.Color(150, 50, 0)); // Moderately red color.
+      pixels.show(); // This sends the updated pixel color to the hardware.
+    }
 
 
     Serial.flush();//Waits for the transmission of outgoing serial data to complete
@@ -107,6 +125,13 @@ void loop() {
     // check if the button have been pushed
 
     if (buttonPushed == 1 ) {
+      // green light
+      //loop for updating the colours of the NeoPixel
+      for (int i = 0; i < 1; i++) {
+        // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
+        pixels.setPixelColor(i, pixels.Color(0, 150, 0)); // Moderately bright green color.
+        pixels.show(); // This sends the updated pixel color to the hardware.
+      }
 
       //Setup for the content off the URL/web address
       String twitterAddress = "http://verkstad.cc/iot/mmx/code/twitter/code/sendTweet.php?pass=Schl400ch3R.&message=";

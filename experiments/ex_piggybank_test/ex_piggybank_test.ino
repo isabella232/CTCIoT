@@ -50,6 +50,7 @@ void loop() {
     Serial.println("1 coin");
     coinCount = coinCount + 1;
     coinState1 = 0;
+    delay(50); // small delay
   }
 
 
@@ -70,6 +71,7 @@ void loop() {
     Serial.println("5 coin");
     coinCount = coinCount + 5;
     coinState2 = 0;
+    delay(50); // small delay
   }
 
 
@@ -90,6 +92,7 @@ void loop() {
     Serial.println("10 coin");
     coinCount = coinCount + 10;
     coinState3 = 0;
+    delay(50); // small delay
   }
 
 
@@ -100,7 +103,7 @@ void loop() {
   buttonSwitch1 = buttonState1;
   buttonSwitch2 = buttonState2;
   buttonSwitch3 = buttonState3;
-  delay(150); // small delay
+
 
 
 

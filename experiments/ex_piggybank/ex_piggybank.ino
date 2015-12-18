@@ -70,6 +70,7 @@ void loop() {
   if (coinState1 == 1) {
     coinCount = coinCount + 1;
     coinState1 = 0;
+    delay(50); // small delay
   }
 
 
@@ -89,6 +90,7 @@ void loop() {
   if (coinState2 == 1) {
     coinCount = coinCount + 5;
     coinState2 = 0;
+    delay(50); // small delay
   }
 
 
@@ -108,6 +110,7 @@ void loop() {
   if (coinState3 == 1) {
     coinCount = coinCount + 10;
     coinState3 = 0;
+    delay(50); // small delay
   }
 
   if (callurlTimer + callurlDelay < millis()) {
@@ -164,7 +167,7 @@ void loop() {
   buttonSwitch1 = buttonState1;
   buttonSwitch2 = buttonState2;
   buttonSwitch3 = buttonState3;
-  delay(150); // small delay
+
 
 
 
